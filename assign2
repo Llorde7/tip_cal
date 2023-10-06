@@ -1,0 +1,14 @@
+# Input: Total bill amount, tip percentage, and number of people
+total_bill = float(input("Please enter the total bill amount: $"))
+tip_percentage = int(input("Please choose a tip percentage (10, 12, or 15): "))
+num_people = int(input("Please enter the number of people splitting the bill: "))
+
+# Calculate the tip and total amount
+tip_amount = total_bill * (tip_percentage / 100)
+total_amount = total_bill + tip_amount
+
+# Calculate the amount each person should pay
+amount_per_person = total_amount / num_people
+
+# Output: Display the amount each person should pay rounded to two decimal points
+print(f"Each person should pay: ${amount_per_person:.2f}")
